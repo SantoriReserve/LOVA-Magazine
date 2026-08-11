@@ -59,7 +59,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="text-sm text-white/80 hover:text-white"
                 >
-                  Instagram
+                  Instagram {siteConfig.instagramHandle}
                 </a>
               </li>
               <li>

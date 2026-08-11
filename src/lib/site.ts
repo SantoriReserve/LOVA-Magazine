@@ -6,7 +6,8 @@ export const siteConfig = {
     "LOVA is a discovery publication curating businesses, places, products, experiences, and services worth knowing.",
   email: "hello@lovamagazine.com",
   url: "https://lovamagazine.com",
-  instagram: "https://instagram.com/lovamagazine",
+  instagram: "https://www.instagram.com/thelovamagazine/",
+  instagramHandle: "@thelovamagazine",
   issue: "Issue 001 — Coming Soon",
 };
 
@@ -143,7 +144,7 @@ export const faqGroups: FaqGroup[] = [
       {
         question: "How can I know when it launches?",
         answer:
-          "Follow LOVA on Instagram and check back on the website. You can also join the email list in the footer to be notified when Issue 001 launches.",
+          "Follow LOVA on Instagram (@thelovamagazine) and check back on the website. You can also join the email list in the footer to be notified when Issue 001 launches.",
       },
     ],
   },
@@ -159,7 +160,7 @@ export const faqGroups: FaqGroup[] = [
       {
         question: "How can I stay updated?",
         answer:
-          "Follow LOVA on Instagram and join the email list on the website for updates as Issue 001 develops.",
+          "Follow LOVA on Instagram (@thelovamagazine) and join the email list on the website for updates as Issue 001 develops.",
       },
     ],
   },
