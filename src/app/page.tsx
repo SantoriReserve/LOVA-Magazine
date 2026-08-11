@@ -168,14 +168,18 @@ export default function HomePage() {
                   themselves to potential customers through a publication built
                   around discovery.
                 </p>
+                <p>Paid feature opportunities for Issue 001 start at $250.</p>
               </div>
-              <div className="mt-8 sm:mt-9">
+              <div className="mt-8 sm:mt-9 flex flex-col sm:flex-row gap-3 sm:items-center">
                 <CTA href="/be-featured#application" variant="outline-light">
-                  Be Featured
+                  Apply to Be Featured
+                </CTA>
+                <CTA href="/feature-options" variant="outline-light">
+                  View Feature Options
                 </CTA>
               </div>
               <p className="mt-6 sm:mt-8 label-caps text-warm-muted tracking-[0.2em]">
-                Business features for Issue 001 are now open.
+                Applications are reviewed before placement is confirmed.
               </p>
             </div>
           </div>
@@ -220,14 +224,22 @@ export default function HomePage() {
             <p className="label-caps text-ink-muted mb-3">
               Don’t see your industry?
             </p>
-            <p className="text-sm sm:text-[0.95rem] text-ink-muted leading-relaxed mb-6">
+            <p className="text-sm sm:text-[0.95rem] text-ink-muted leading-relaxed mb-4">
               LOVA isn’t limited to the categories above. If you believe your
               business belongs in a publication built around discovery, we’d
               still like to hear from you.
             </p>
-            <CTA href="/be-featured#application" variant="text">
-              Apply to Be Featured →
-            </CTA>
+            <p className="text-sm text-ink-muted leading-relaxed mb-6">
+              Issue 001 paid feature opportunities start at $250.
+            </p>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+              <CTA href="/be-featured#application" variant="text">
+                Apply to Be Featured →
+              </CTA>
+              <CTA href="/feature-options" variant="text">
+                View Feature Options →
+              </CTA>
+            </div>
           </div>
         </div>
       </section>

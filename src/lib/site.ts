@@ -15,6 +15,7 @@ export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/discover", label: "Discover" },
+  { href: "/feature-options", label: "Feature Options" },
   { href: "/be-featured#application", label: "Be Featured" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
@@ -23,10 +24,16 @@ export const navLinks = [
 /** Canonical destination for every Be Featured / apply CTA */
 export const beFeaturedApplyHref = "/be-featured#application";
 
+export type FaqItem = {
+  question: string;
+  answer: string;
+  link?: { href: string; label: string };
+};
+
 export type FaqGroup = {
   id: string;
   label: string;
-  items: { question: string; answer: string }[];
+  items: FaqItem[];
 };
 
 export const faqGroups: FaqGroup[] = [
@@ -68,12 +75,38 @@ export const faqGroups: FaqGroup[] = [
       {
         question: "How can my business be featured?",
         answer:
-          "Submit an application through the Be Featured page. Our team reviews submissions and contacts selected businesses with available feature opportunities for Issue 001.",
+          "Submit an application through the Be Featured page. Our team reviews submissions and contacts selected businesses with available paid feature opportunities for Issue 001.",
+      },
+      {
+        question: "Is there a cost to be featured?",
+        answer:
+          "Yes. LOVA offers paid business feature opportunities for Issue 001 starting at $250. All businesses are reviewed for fit before placement is confirmed.",
+      },
+      {
+        question: "What feature options are available?",
+        answer:
+          "Issue 001 currently offers three feature options: a $250 Business Feature, a $450 Full-Page Feature, and a $650 Premier Feature.",
+        link: { href: "/feature-options", label: "View Feature Options →" },
+      },
+      {
+        question: "What is the difference between the feature options?",
+        answer:
+          "The primary differences are the amount of space dedicated to the business and placement within the issue. The Business Feature is a half-page placement, the Full-Page Feature provides a dedicated page, and the Premier Feature provides a dedicated full page with priority positioning.",
+      },
+      {
+        question: "Do I have to pay when I apply?",
+        answer:
+          "No. There is no payment required to submit an application. Payment is only required after a business has been selected and a feature opportunity has been confirmed.",
+      },
+      {
+        question: "Can I choose which feature I want?",
+        answer:
+          "Businesses can indicate their preferred feature option when applying. Final placement and availability are confirmed after the application has been reviewed.",
       },
       {
         question: "What information do I need to submit?",
         answer:
-          "You’ll share your business name, contact details, location, industry, and a short description of what you do. Website and social links are helpful but optional.",
+          "You’ll share your business name, contact details, location, industry, and a short description of what you do. Website and social links are helpful but optional. You may also optionally indicate which feature option you’re most interested in.",
       },
       {
         question: "Can newly opened businesses apply?",
@@ -82,8 +115,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         question: "Can established businesses apply?",
-        answer:
-          "Yes. Established businesses are welcome to apply.",
+        answer: "Yes. Established businesses are welcome to apply.",
       },
       {
         question: "Can online businesses or brands apply?",
@@ -92,8 +124,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         question: "Can service-based businesses apply?",
-        answer:
-          "Yes. Service-based businesses are welcome to apply.",
+        answer: "Yes. Service-based businesses are welcome to apply.",
       },
       {
         question: "Can event businesses apply?",
@@ -103,17 +134,17 @@ export const faqGroups: FaqGroup[] = [
       {
         question: "Where will featured businesses appear?",
         answer:
-          "Selected businesses may appear in LOVA’s editorial discovery content as Issue 001 develops. Specific placements and formats vary by opportunity and are shared after review.",
+          "Selected businesses may appear as paid features within LOVA Issue 001. Specific placements and formats vary by feature option and are shared after review.",
       },
       {
         question: "What happens after I submit an application?",
         answer:
-          "Our team reviews your application. If your business is selected for a feature opportunity, we will follow up with next steps and available options. Not every applicant will be contacted.",
+          "Our team reviews your application. If your business is selected for a feature opportunity, we will follow up with next steps and available options. Not every applicant will be contacted. Payment is only required after a feature has been confirmed.",
       },
       {
         question: "Does submitting an application guarantee a feature?",
         answer:
-          "No. Applications are reviewed to determine whether a business is a fit for LOVA before any feature opportunity is offered.",
+          "No. Applications are reviewed before placement is confirmed. Submitting an application does not guarantee inclusion in LOVA.",
       },
       {
         question: "Can I submit more than one business?",
@@ -139,7 +170,7 @@ export const faqGroups: FaqGroup[] = [
       {
         question: "What will Issue 001 include?",
         answer:
-          "The first edition will bring together businesses across dining, beauty, wellness, fashion and retail, hospitality, services, lifestyle and experiences, events and entertainment, and more.",
+          "The first edition will bring together businesses across dining, beauty, wellness, fashion and retail, hospitality, services, lifestyle and experiences, events and entertainment, and more — including paid feature opportunities for selected businesses.",
       },
       {
         question: "How can I know when it launches?",
@@ -172,9 +203,9 @@ export const faqPreview = faqGroups[0].items.slice(0, 4);
 export const beFeaturedFaqItems = faqGroups[1].items.filter((item) =>
   [
     "How can my business be featured?",
-    "What information do I need to submit?",
+    "Is there a cost to be featured?",
+    "What feature options are available?",
+    "Do I have to pay when I apply?",
     "Does submitting an application guarantee a feature?",
-    "What happens after I submit an application?",
-    "Can event businesses apply?",
   ].includes(item.question)
 );

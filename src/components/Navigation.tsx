@@ -125,7 +125,7 @@ export function Navigation() {
         <nav className="editorial-container flex h-16 items-center justify-between md:h-[4.25rem]">
           <Wordmark size="nav" />
 
-          <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 lg:flex">
+          <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-5 xl:gap-8 lg:flex">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link

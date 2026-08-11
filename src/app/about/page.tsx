@@ -93,11 +93,15 @@ export default function AboutPage() {
               The first edition is currently being developed. It will bring
               together businesses across dining, beauty, wellness, fashion &
               retail, hospitality, services, lifestyle & experiences, events &
-              entertainment, and more. Business features are open for review.
+              entertainment, and more. LOVA also offers paid feature
+              opportunities for selected businesses.
             </p>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <CTA href="/be-featured#application" variant="outline-light">
                 Be Featured
+              </CTA>
+              <CTA href="/feature-options" variant="outline-light">
+                Feature Options
               </CTA>
             </div>
           </div>

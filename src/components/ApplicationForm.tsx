@@ -3,6 +3,7 @@
 import { FormEvent, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { applicationCategoryOptions } from "@/lib/categories";
+import { featureInterestOptions } from "@/lib/featureOptions";
 import { Button } from "@/components/CTA";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
@@ -57,6 +58,7 @@ export function ApplicationForm({
       otherIndustry: String(formData.get("otherIndustry") || "").trim(),
       about: String(formData.get("about") || "").trim(),
       whyFeatured: String(formData.get("whyFeatured") || "").trim(),
+      featureInterest: String(formData.get("featureInterest") || "").trim(),
       additional: String(formData.get("additional") || "").trim(),
       submittedAt: new Date().toISOString(),
       formType: "business-feature-application",
@@ -263,6 +265,29 @@ export function ApplicationForm({
           rows={3}
           className={`${fieldClass} resize-y min-h-[96px]`}
         />
+      </div>
+
+      <div>
+        <label htmlFor="featureInterest" className={labelClass}>
+          Feature Interest (optional)
+        </label>
+        <select
+          id="featureInterest"
+          name="featureInterest"
+          defaultValue=""
+          className={`${fieldClass} appearance-none cursor-pointer bg-transparent`}
+        >
+          <option value="">Select an option</option>
+          {featureInterestOptions.map((opt) => (
+            <option key={opt} value={opt}>
+              {opt}
+            </option>
+          ))}
+        </select>
+        <p className="mt-3 text-xs text-ink-muted leading-relaxed max-w-lg">
+          You’re not committing to a feature by selecting an option. This simply
+          helps us understand what you may be interested in.
+        </p>
       </div>
 
       <div>

@@ -1,17 +1,14 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
-
-type FAQItem = {
-  question: string;
-  answer: string;
-};
+import type { FaqItem } from "@/lib/site";
 
 export function FAQAccordion({
   items,
   defaultOpen = null,
 }: {
-  items: readonly FAQItem[] | FAQItem[];
+  items: readonly FaqItem[] | FaqItem[];
   defaultOpen?: number | null;
 }) {
   const [openIndex, setOpenIndex] = useState<number | null>(defaultOpen);
@@ -54,9 +51,21 @@ export function FAQAccordion({
               }`}
             >
               <div className="overflow-hidden">
-                <p className="pb-5 max-w-2xl text-sm text-ink-muted leading-relaxed">
+                <p className="pb-3 max-w-2xl text-sm text-ink-muted leading-relaxed">
                   {item.answer}
                 </p>
+                {item.link ? (
+                  <p className="pb-5">
+                    <Link
+                      href={item.link.href}
+                      className="text-[0.65rem] uppercase tracking-[0.16em] text-ink hover:opacity-60"
+                    >
+                      {item.link.label}
+                    </Link>
+                  </p>
+                ) : (
+                  <div className="pb-2" />
+                )}
               </div>
             </div>
           </div>

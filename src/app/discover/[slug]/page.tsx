@@ -123,10 +123,22 @@ export default async function DiscoverCategoryPage({ params }: PageProps) {
             <p className="mt-5 sm:mt-6 text-warm-muted text-sm sm:text-[0.95rem] leading-relaxed">
               {category.businessCopy}
             </p>
-            <div className="mt-8 sm:mt-9">
-              <CTA href={applyHref} variant="outline-light">
-                Apply to Be Featured →
-              </CTA>
+            <div className="mt-8 border-t border-line-dark pt-8">
+              <p className="label-caps text-warm-muted mb-3">
+                Interested in being featured?
+              </p>
+              <p className="text-warm-muted text-sm leading-relaxed">
+                Paid Issue 001 feature opportunities are available starting at
+                $250.
+              </p>
+              <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                <CTA href={applyHref} variant="outline-light">
+                  Apply to Be Featured
+                </CTA>
+                <CTA href="/feature-options" variant="outline-light">
+                  View Feature Options
+                </CTA>
+              </div>
             </div>
           </div>
         </div>

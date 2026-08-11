@@ -8,11 +8,12 @@ import { CTA } from "@/components/CTA";
 import { categories } from "@/lib/categories";
 import { beFeaturedFaqItems } from "@/lib/site";
 import { ApplicationHashScroll } from "@/components/ApplicationHashScroll";
+import { featureOptions, featureOptionsHref } from "@/lib/featureOptions";
 
 export const metadata: Metadata = {
   title: "Be Featured",
   description:
-    "Apply to have your business featured in LOVA Magazine Issue 001. Business features are now open.",
+    "Apply to be featured in LOVA Magazine Issue 001. Paid feature opportunities start at $250. Applications are reviewed before placement is confirmed.",
 };
 
 const steps = [
@@ -31,7 +32,7 @@ const steps = [
     number: "03",
     title: "Next Steps",
     description:
-      "Selected businesses will receive additional information regarding the feature opportunity and Issue 001.",
+      "Selected businesses receive Issue 001 feature options. Payment is only required after a feature opportunity has been confirmed.",
   },
 ] as const;
 
@@ -44,7 +45,7 @@ export default function BeFeaturedPage() {
         description="LOVA gives businesses a simple way to introduce what they do to new potential customers through a publication built around discovery."
       >
         <p className="label-caps text-ink-muted">
-          Business features for Issue 001 are now open.
+          Paid Issue 001 feature opportunities start at $250.
         </p>
       </EditorialHero>
 
@@ -64,8 +65,9 @@ export default function BeFeaturedPage() {
               noise.
             </p>
             <p className="text-sm">
-              Submitting an application does not guarantee placement. Feature
-              opportunities are shared with selected businesses after review.
+              LOVA offers paid feature opportunities for selected businesses.
+              Submitting an application does not guarantee placement. Payment is
+              only required after a feature opportunity has been confirmed.
             </p>
           </div>
         </div>
@@ -121,9 +123,42 @@ export default function BeFeaturedPage() {
         </div>
       </section>
 
+      <section className="bg-ivory border-b border-line">
+        <div className="editorial-container py-14 md:py-16">
+          <div className="max-w-2xl mb-8">
+            <h2 className="font-display text-2xl md:text-3xl text-ink">
+              Feature Opportunities
+            </h2>
+            <p className="mt-4 text-[0.95rem] text-ink-muted leading-relaxed">
+              LOVA Issue 001 offers paid business features starting at $250.
+            </p>
+          </div>
+          <ul className="max-w-xl">
+            {featureOptions.map((option) => (
+              <li
+                key={option.id}
+                className="border-t border-line py-4 flex items-baseline justify-between gap-6"
+              >
+                <span className="text-[0.72rem] uppercase tracking-[0.14em] text-ink">
+                  {option.name}
+                </span>
+                <span className="font-display text-xl text-ink shrink-0">
+                  {option.priceLabel}
+                </span>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-8">
+            <CTA href={featureOptionsHref} variant="text">
+              View Feature Options →
+            </CTA>
+          </div>
+        </div>
+      </section>
+
       <section
         id="application"
-        className="bg-ivory scroll-mt-24 md:scroll-mt-28 border-b border-line"
+        className="bg-white scroll-mt-24 md:scroll-mt-28 border-b border-line"
       >
         <div className="editorial-container py-14 md:py-20">
           <div className="max-w-2xl mb-10">
@@ -131,8 +166,9 @@ export default function BeFeaturedPage() {
               Apply to Be Featured
             </h2>
             <p className="mt-5 text-ink-muted text-[0.95rem] leading-relaxed">
-              Tell us about your business. Selected businesses will receive
-              additional information about Issue 001 feature opportunities.
+              Tell us about your business. There is no payment required to
+              apply. Selected businesses will receive additional information
+              about Issue 001 feature opportunities.
             </p>
           </div>
           <div className="max-w-2xl">
