@@ -9,7 +9,7 @@ import {
 export const metadata: Metadata = {
   title: "Feature Options",
   description:
-    "LOVA Issue 001 paid business feature opportunities — Business Feature $250, Full-Page Feature $450, and Premier Feature $650.",
+    "LOVA Issue 001 paid business feature opportunities — Quarter Page $250, Half Page $375, and Full Page $700.",
 };
 
 export default function FeatureOptionsPage() {
@@ -26,8 +26,8 @@ export default function FeatureOptionsPage() {
             selected to appear in Issue 001.
           </p>
           <p className="mt-4 max-w-xl text-sm sm:text-[0.95rem] text-ink-muted leading-relaxed">
-            Choose the level of space and visibility that best fits how you’d
-            like your business presented.
+            Choose the placement size that best fits how you’d like your
+            business presented.
           </p>
         </div>
       </section>

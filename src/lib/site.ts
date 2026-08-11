@@ -85,13 +85,13 @@ export const faqGroups: FaqGroup[] = [
       {
         question: "What feature options are available?",
         answer:
-          "Issue 001 currently offers three feature options: a $250 Business Feature, a $450 Full-Page Feature, and a $650 Premier Feature.",
+          "LOVA Issue 001 currently offers three placement options: a $250 Quarter Page, a $375 Half Page, and a $700 Full Page.",
         link: { href: "/feature-options", label: "View Feature Options →" },
       },
       {
         question: "What is the difference between the feature options?",
         answer:
-          "The primary differences are the amount of space dedicated to the business and placement within the issue. The Business Feature is a half-page placement, the Full-Page Feature provides a dedicated page, and the Premier Feature provides a dedicated full page with priority positioning.",
+          "The primary difference is the amount of space dedicated to your business within the publication. Quarter-page features provide a concise introduction, half-page features allow additional room for imagery and information, and full-page features provide a dedicated page for your business.",
       },
       {
         question: "Do I have to pay when I apply?",
@@ -99,9 +99,9 @@ export const faqGroups: FaqGroup[] = [
           "No. There is no payment required to submit an application. Payment is only required after a business has been selected and a feature opportunity has been confirmed.",
       },
       {
-        question: "Can I choose which feature I want?",
+        question: "Can I choose my feature size?",
         answer:
-          "Businesses can indicate their preferred feature option when applying. Final placement and availability are confirmed after the application has been reviewed.",
+          "Businesses can indicate their preferred placement when applying. Final placement and availability are confirmed after the application has been reviewed.",
       },
       {
         question: "What information do I need to submit?",

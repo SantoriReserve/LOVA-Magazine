@@ -13,63 +13,62 @@ export type FeatureOption = {
 /** Single source of truth for Issue 001 paid feature options */
 export const featureOptions: FeatureOption[] = [
   {
-    id: "business",
-    name: "Business Feature",
+    id: "quarter-page",
+    name: "Quarter Page",
     price: 250,
     priceLabel: "$250",
     summary:
-      "A curated half-page introduction to your business within LOVA Issue 001. Designed for businesses that want a concise, visually polished presence within the publication.",
+      "A concise introduction to your business within LOVA Issue 001.",
+    includes: [
+      "Quarter-page placement",
+      "Business name",
+      "Short business description",
+      "Selected imagery where space allows",
+      "Relevant business information such as website or social media",
+    ],
+    bestFor:
+      "Best for businesses looking for a simple, concise introduction within LOVA.",
+  },
+  {
+    id: "half-page",
+    name: "Half Page",
+    price: 375,
+    priceLabel: "$375",
+    summary:
+      "Additional space for imagery and information, giving readers a more complete introduction to your business.",
     includes: [
       "Half-page placement",
       "Business name",
-      "Business description",
+      "Expanded business description",
       "Selected imagery",
-      "Website / social information where appropriate",
+      "Relevant business information such as website or social media",
     ],
     bestFor:
-      "Best for businesses looking for a concise introduction within the publication.",
+      "Best for businesses that want additional room for imagery and information.",
   },
   {
     id: "full-page",
-    name: "Full-Page Feature",
-    price: 450,
-    priceLabel: "$450",
+    name: "Full Page",
+    price: 700,
+    priceLabel: "$700",
     summary:
-      "A dedicated full-page feature offering additional space to introduce your business, what you offer, and what makes it worth discovering.",
+      "A dedicated page offering the most space to showcase your business through imagery, information, and a stronger visual presence.",
     includes: [
       "Dedicated full-page placement",
+      "Business name",
       "Expanded business introduction",
       "Larger editorial imagery",
-      "Business information",
-      "Website / social information where appropriate",
+      "Relevant business information such as website or social media",
     ],
     bestFor:
-      "Best for businesses that want more room for imagery, information, and a more substantial introduction.",
-  },
-  {
-    id: "premier",
-    name: "Premier Feature",
-    price: 650,
-    priceLabel: "$650",
-    summary:
-      "An elevated full-page feature with premium positioning within LOVA Issue 001.",
-    includes: [
-      "Dedicated full-page placement",
-      "Expanded business introduction",
-      "Larger editorial imagery",
-      "Business information",
-      "Website / social information where appropriate",
-      "Priority positioning within the issue",
-    ],
-    bestFor:
-      "Best for businesses looking for a larger editorial presence with priority positioning within the issue.",
+      "Best for businesses that want a dedicated page and the greatest amount of space to present their business.",
   },
 ];
 
 export const featureInterestOptions = [
-  "Business Feature — $250",
-  "Full-Page Feature — $450",
-  "Premier Feature — $650",
+  "Quarter Page — $250",
+  "Half Page — $375",
+  "Full Page — $700",
   "Not Sure Yet",
 ] as const;
 
